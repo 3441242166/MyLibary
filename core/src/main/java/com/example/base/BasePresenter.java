@@ -1,6 +1,7 @@
 package com.example.base;
 
 import android.content.Context;
+import android.util.Log;
 
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.disposables.Disposable;
@@ -39,11 +40,12 @@ public abstract class BasePresenter<V extends IView,M extends IModel> implements
 
     @Override
     public void onCreate() {
-
+        Log.i(TAG, "onCreate");
     }
 
     @Override
     public void onDestroy(){
+        Log.i(TAG, "onDestroy");
         unDispose();
         if (mModel != null){
             mModel.onDestroy();

@@ -13,8 +13,9 @@ class MainActivity : BaseTopBarVpActivity<MainPresenter>() ,IMainView  {
 
     override fun initContent() {
         setTopLeftButton()
-        setTopRightButton("") {
-            setTitle("aaa")
+        setTopRightButton(R.menu.menu) {
+            setTitle("???")
+            true
         }
         setTitle("xxx")
     }

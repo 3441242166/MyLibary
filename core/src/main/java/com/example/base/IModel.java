@@ -1,7 +1,9 @@
 package com.example.base;
 
 
-public interface IModel {
+import android.arch.lifecycle.LifecycleObserver;
+
+public interface IModel extends LifecycleObserver {
 
     void onDestroy();
 }
